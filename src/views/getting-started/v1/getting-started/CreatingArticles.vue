@@ -777,15 +777,24 @@ end
 
 # infra/config/routes/web_routes.rb
 
+require_root 'adapter-intake/web-app/request/home_web_adapter'
 require_root 'adapter-intake/web-app/request/articles_web_adapter'
 
-  GET '/articles',                  to: [ArticlesWebAdapter, :index]
-  GET '/articles/new',              to: [ArticlesWebAdapter, :new]
-  POST '/articles',                 to: [ArticlesWebAdapter, :create]
-  GET '/articles/:id',              to: [ArticlesWebAdapter, :show]
-  GET '/articles/:id/edit',         to: [ArticlesWebAdapter, :edit]
-  PUT '/articles/:id',              to: [ArticlesWebAdapter, :update]
-  DELETE '/articles/:id',           to: [ArticlesWebAdapter, :delete]
+Web = WebRouter.draw do
+  # Home
+  GET '/', to: [HomeWebAdapter, :home_page]
+
+  GET '/articles',              to: [ArticlesWebAdapter, :index]
+  GET '/articles/new',          to: [ArticlesWebAdapter, :new]
+  POST '/articles',             to: [ArticlesWebAdapter, :create]
+
+  GET '/articles/:id',          to: [ArticlesWebAdapter, :show]
+  GET '/articles/:id/edit',     to: [ArticlesWebAdapter, :edit]
+  PUT '/articles/:id',          to: [ArticlesWebAdapter, :update]
+  DELETE '/articles/:id',       to: [ArticlesWebAdapter, :delete]
+
+end
+
 ______________________________________________________________________
 
 for API
