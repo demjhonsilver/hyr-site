@@ -43,7 +43,9 @@ _____________________________________
 http://localhost:1091
 
 ----------
-Install Vscode extension:
+Open your IDE or Integrated Development Environment (example VS code)
+
+Install Visual Studio code extension:
 
 ctrl+shift+x
 ----------
@@ -808,7 +810,7 @@ end
 
 
 
-<h2>Templates</h2>
+<h2>Templates | Make sure the “Hyraft” Visual Studio Code extension is installed.</h2>
 <!-- Template Index -->
 <section id="templates-index" class="mb-5">
   <div class="step-card card border-0 shadow-sm mb-4">
