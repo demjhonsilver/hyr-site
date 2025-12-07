@@ -173,63 +173,24 @@ ___________________________________________________________________
               </div>
               <div class="card-body">
                
-<pre><code>&lt;!-- pages/articles/new.hyr --&gt;
-&lt;metadata html&gt;
-&lt;/metadata&gt;
+<pre><code>
+    &lt;displayer html&gt;
+    &nbsp;&nbsp;&lt;div class="component-name"&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;component context="World"/&gt;
+    &nbsp;&nbsp;&lt;/div&gt;
+    &lt;/displayer&gt;
 
-&lt;displayer html&gt;
-&lt;div class="container mt-4"&gt;
-  &lt;div class="row justify-content-center"&gt;
-    &lt;div class="col-md-8"&gt;
-      &lt;div class="d-flex align-items-center mb-4"&gt;
-        &lt;h1 class="h2 mb-0"&gt;Create New Article&lt;/h1&gt;
-      &lt;/div&gt;
-      
-      [.if_error.]
-      
-      &lt;form action="/articles" method="post" enctype="multipart/form-data"&gt;
-        &lt;div class="mb-3"&gt;
-          &lt;label for="title" class="form-label fw-bold"&gt;Title&lt;/label&gt;
-          &lt;input type="text" class="form-control form-control-lg" id="title" name="data[title]" placeholder="Enter article title" required&gt;
-        &lt;/div&gt;
-        
-        &lt;div class="mb-4"&gt;
-          &lt;label for="content" class="form-label fw-bold"&gt;Content&lt;/label&gt;
-          &lt;textarea class="form-control" id="content" name="data[content]" rows="12" placeholder="Write your article content here..." required&gt;&lt;/textarea&gt;
-        &lt;/div&gt;
-        
-        &lt;div class="d-flex gap-2"&gt;
-          &lt;button type="submit" class="btn btn-success"&gt;
-            &lt;i class="bi bi-plus-circle me-2"&gt;&lt;/i&gt;Create Article
-          &lt;/button&gt;
-          &lt;a href="/articles" class="btn btn-outline-secondary"&gt;
-            &lt;i class="bi bi-arrow-left me-2"&gt;&lt;/i&gt;Back to Articles
-          &lt;/a&gt;
-        &lt;/div&gt;
-      &lt;/form&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;/displayer&gt;
+    &lt;transmuter rb&gt;
+    &nbsp;&nbsp;def display_component(context:)>
+    &nbsp;&nbsp;&nbsp;&nbsp;"&lt;div class='component'&gt;Hello #{context}!&lt;/div&gt;"
+    &nbsp;&nbsp;end
+    &lt;/transmuter&gt;
 
-&lt;transmuter rb&gt;
-def page_title
-  "Create New Articles"
-end
+    &lt;manifestor js&gt;
+    &nbsp;&nbsp;// JavaScript code
+    &lt;/manifestor&gt;
 
-def if_error
-  if @error
-&lt;html&gt;
-  &lt;div class='alert alert-danger d-flex align-items-center mb-4'&gt;
-    &lt;i class="bi bi-exclamation-triangle-fill me-2"&gt;&lt;/i&gt;
-    &lt;div&gt;#{purify_html(@error)}&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/html&gt;
-  else
-    ""
-  end
-end
-&lt;/transmuter&gt;
+    &lt;style src="/styles/css/main.css" /&gt;
 </code></pre>
 
 
