@@ -105,14 +105,16 @@ Open this folder path:
 
 C:\Ruby\{version}\msys64 
 
-example:
+Note: This will depend on the folder corresponding to your Ruby version.
+
+example only:
 
 C:\Ruby34-x64\msys64 
 
 ----------------
-Check if mingw64 exists.
+Check if mingw64 file exists.
 
-C:Ruby34-x64/msys64/mingw64
+mingw64
 
 -------------------
 
@@ -120,7 +122,7 @@ INSTALL GEM: mysql2
 
 (Note: An internet connection is required).
 
-Open Command Prompt inside the folder C:Ruby34-x64/msys64/mingw64
+Open Command Prompt inside the folder C:Ruby34-x64/msys64
 
 or
 
@@ -128,9 +130,10 @@ or
 
  type: 
 
- cd C:Ruby34-x64/msys64/mingw64
+ cd C:Ruby34-x64/msys64
 
  -------------------
+ then:
 
 run:
 
