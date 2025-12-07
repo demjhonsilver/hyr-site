@@ -189,7 +189,7 @@
       <h2 class="h3 fw-bold mb-4">Open: Command Prompt / Terminal</h2>
       <!-- Quick install content will go here -->
                 <div class="code-block bg-danger text-light p-3 rounded mb-3">
-                    <code class="text-light" style="font-size: 18px;"><i class="bi bi-gem me-2"></i>gem install hyraft</code>
+                    <code class="text-light" style="font-size: 18px;"><i class="bi bi-gem me-2"></i>gem install hyraft --pre</code>
                 </div>
 
 

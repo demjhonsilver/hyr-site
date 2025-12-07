@@ -12,7 +12,7 @@
                Hyraft Framework 
           </h1>
           <p class="lead text-success mb-4">
-            Version: 0.1.0.alpha1
+            Version: 0.1.0.alpha2
           </p>
           <p class="lead text-muted mb-4">
             A <strong>hexagonal architecture</strong> <em>RUBY</em> framework built like a high-performance engine. 
