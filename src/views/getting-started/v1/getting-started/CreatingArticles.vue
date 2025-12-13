@@ -932,7 +932,7 @@ end
 def page_title
   "Articles List"
 end
-&lt;/transmuter rb&gt;
+&lt;/transmuter&gt;
 </code></pre>
       </div>
     </div>
